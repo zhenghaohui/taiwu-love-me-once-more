@@ -60,6 +60,10 @@ def cmd_reset():
     files = get_backup_files(backup_files_path)
     for group in groups:
         target = max([name for name in files if name.find(group + ".") == 0])
+        from_path = os.path.join(backup_files_path, target)
+        to_path = os.path.join(save_files_path, group)
+        shutil.rmtree(to_path)
+        shutil.copytree(from_path, to_path)
         print('{} : load to {}'.format(group, target))
 
 
