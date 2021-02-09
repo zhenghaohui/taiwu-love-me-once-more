@@ -19,6 +19,16 @@ jump into the source code directory
 cd taiwu-love-me-once-more
 ```
 
+Edit the path of your game path & your backup path
+
+```shell
+vim taiwu/__main__.py
+
+# Edit:
+save_files_path = '/mnt/d/programs/steam/steamapps/common/The Scroll Of Taiwu/The Scroll Of Taiwu Alpha V1.0_Data/SaveFiles'
+backup_files_path = '/mnt/c/Users/Administrator/Documents/TaiWuHuiJuan/Backup'
+```
+
 install using python3:
 
 ```shell
